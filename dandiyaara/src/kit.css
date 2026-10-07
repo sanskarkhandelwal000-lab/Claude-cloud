@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@400;600;700&family=Jost:wght@300;400;500;600&family=Noto+Serif+Gujarati:wght@500;700&family=Pinyon+Script&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,700;0,6..96,900;1,6..96,500&display=block');
+
+:root {
+  --ink: #0a0611; --gold: #f2c66d; --gold-hi: #fff1c1; --gold-lo: #c08a2c; --rani: #ff2d7a; --marigold: #ffb72b;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { background: var(--ink); }
+.canvas { position: relative; overflow: hidden; background: var(--ink); color: var(--gold); font-family: 'Jost', sans-serif; }
+.layer { position: absolute; inset: 0; }
+.abs { position: absolute; }
+.center { left: 0; right: 0; text-align: center; }
+
+/* Foil type: stacked layers fake a pressed metallic emboss */
+.foil { position: relative; display: inline-block; font-family: 'Cinzel Decorative', serif; font-weight: 900; line-height: 1; white-space: nowrap; }
+.foil > span { display: block; }
+.foil .base { color: #4a2a08; transform: translate(0, .045em); filter: blur(.2px); }
+.foil .shade { position: absolute; inset: 0; color: transparent;
+  background: linear-gradient(180deg, #8a5a17 0%, #3b2006 100%); -webkit-background-clip: text; background-clip: text; transform: translate(0, .022em); }
+.foil .face { position: absolute; inset: 0; color: transparent;
+  background: linear-gradient(176deg, #fff6d6 0%, #ffe39a 22%, #e9b54f 40%, #a86e1c 52%, #f7d07a 64%, #fff1c1 78%, #c78f33 100%);
+  -webkit-background-clip: text; background-clip: text; }
+.foil .shine { position: absolute; inset: 0; color: transparent;
+  background: linear-gradient(115deg, transparent 30%, rgba(255,255,255,.75) 42%, transparent 48%, transparent 70%, rgba(255,255,255,.45) 76%, transparent 80%);
+  -webkit-background-clip: text; background-clip: text; mix-blend-mode: screen; }
+.foil .halo { position: absolute; inset: 0; color: #ff9d2e; filter: blur(28px); opacity: .45; z-index: -1; }
+
+.track { letter-spacing: .42em; text-transform: uppercase; }
+.cinzel { font-family: 'Cinzel', serif; }
+.bodoni { font-family: 'Bodoni Moda', serif; }
+.script { font-family: 'Pinyon Script', cursive; }
+.guj { font-family: 'Noto Serif Gujarati', serif; }
+.goldtxt { background: linear-gradient(180deg, #fff1c1, #f2c66d 45%, #c08a2c); -webkit-background-clip: text; background-clip: text; color: transparent; }
+
+.grain { position: absolute; inset: -50%; pointer-events: none; mix-blend-mode: overlay; opacity: .55; }
+.vignette { position: absolute; inset: 0; pointer-events: none;
+  background: radial-gradient(ellipse at 50% 42%, transparent 45%, rgba(4,2,8,.4) 82%, rgba(2,1,4,.75) 100%); }
+.frame { position: absolute; border: 1.5px solid rgba(242,198,109,.55); pointer-events: none; }
+.frame::after { content: ''; position: absolute; inset: 7px; border: .75px solid rgba(242,198,109,.35); }
+.corner { position: absolute; width: 46px; height: 46px; }

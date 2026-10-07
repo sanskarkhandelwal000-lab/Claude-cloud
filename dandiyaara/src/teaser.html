@@ -1,0 +1,60 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Dandiyaara Teaser</title>
+<link rel="stylesheet" href="kit.css">
+<style>
+  .canvas { width: 1240px; height: 1550px; }
+  #brand { top: 120px; }
+  #brand .neish { font: 600 64px 'Cinzel', serif; letter-spacing: .36em; padding-left: .36em; }
+  #brand .pres { font: 400 22px 'Jost'; letter-spacing: .7em; padding-left: .7em; margin-top: 12px; color: #e9d3a0; }
+  #title { top: 1010px; }
+  #title .foil { font-size: 140px; }
+  #tag { top: 1196px; font: 600 38px 'Cinzel', serif; letter-spacing: .46em; padding-left: .46em; color: #fbe3ae; }
+  #div1 { top: 1262px; }
+  #save { top: 1318px; font: 500 22px 'Jost'; letter-spacing: .6em; padding-left: .6em; color: #e8cf98; }
+  #save b { color: #ff2d7a; font-weight: 600; }
+  #hook { top: 1376px; font: 400 46px 'Pinyon Script'; color: #ffcf7a; }
+</style></head>
+<body>
+<div class="canvas" id="cv">
+  <svg class="layer" id="art" viewBox="0 0 1240 1550" width="1240" height="1550"></svg>
+  <div class="abs center" id="brand"><div class="neish goldtxt">NEISH</div><div class="pres">PRESENTS</div></div>
+  <div class="abs center" id="title"><div class="foil"><span class="halo">DANDIYAARA</span><span class="base">DANDIYAARA</span><span class="shade">DANDIYAARA</span><span class="face">DANDIYAARA</span><span class="shine">DANDIYAARA</span></div></div>
+  <div class="abs center" id="tag">NAVRATRI AFTER DARK</div>
+  <div class="abs center" id="div1"></div>
+  <div class="abs center" id="save">SAVE THE NIGHT <b>✦</b> 17 · 10 <b>✦</b> BENGALURU</div>
+  <div class="abs center" id="hook">the circle is forming…</div>
+  <div class="frame" style="inset:26px"></div>
+  <div class="vignette"></div>
+  <svg class="grain" width="200%" height="200%"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="3" stitchTiles="stitch"/><feColorMatrix values="0 0 0 0 .5  0 0 0 0 .5  0 0 0 0 .5  0 0 0 1.4 -.2"/></filter><rect width="100%" height="100%" filter="url(#n)"/></svg>
+</div>
+<script src="kit.js"></script>
+<script>
+  const W = 1240, H = 1550, svg = document.getElementById('art');
+  defs(svg);
+  svg.querySelector('defs').insertAdjacentHTML('beforeend', `
+    <radialGradient id="bg1" cx=".5" cy=".42" r=".7"><stop offset="0" stop-color="#3a0a2a"/><stop offset=".5" stop-color="#14061a"/><stop offset="1" stop-color="#05030a"/></radialGradient>`);
+  el('rect', { width: W, height: H, fill: 'url(#bg1)' }, svg);
+  bandhani(svg, W, H, 34, '#ff2d7a', .06);
+  for (let i = 0; i < 160; i++) el('circle', { cx: Math.random() * W, cy: Math.random() * H * .7, r: Math.random() * 1.5 + .3, fill: '#fff1c1', opacity: Math.random() * .7 + .1 }, svg);
+  bokeh(svg, W, H, 30, [[0, 300, 260, 1000], [980, 300, 1240, 1000]]);
+
+  // A sparse ring of sticks only — the full mandala is saved for the reveal poster.
+  const cx = W / 2, cy = 600, R = 300, g = el('g', { transform: `translate(${cx},${cy})` }, svg);
+  el('circle', { r: R * 1.6, fill: 'url(#moonGlow)' }, g);
+  el('circle', { r: R * 1.02, fill: 'none', stroke: '#f2c66d', 'stroke-width': 1, opacity: .5 }, g);
+  el('circle', { r: R * .96, fill: 'none', stroke: '#f2c66d', 'stroke-width': .6, opacity: .4, 'stroke-dasharray': '2 7' }, g);
+  for (let i = 0; i < 48; i++) {
+    const sg = el('g', { transform: `rotate(${i * 7.5}) translate(0,${R * .78})` }, g);
+    if (i % 2 === 0) stick(sg, R * .14, R * .02, ['#e0157a', '#f2c66d', '#e0157a']);
+    else el('circle', { cx: 0, cy: R * .07, r: R * .018, fill: 'url(#mirror)' }, sg);
+  }
+  // hero emblem: oversized crescent with crossed dandiya
+  const mr = R * .5, m = el('mask', { id: 'cr' }, g);
+  el('rect', { x: -R, y: -R, width: R * 2, height: R * 2, fill: '#fff' }, m);
+  el('circle', { cx: mr * .42, cy: -mr * .3, r: mr * .9, fill: '#000' }, m);
+  [-36, 36].forEach(a => stick(el('g', { transform: `rotate(${a}) translate(0,${-R * .62})` }, g), R * 1.15, R * .05, ['#e0157a', '#c08a2c', '#e0157a', '#f2c66d', '#e0157a', '#c08a2c', '#e0157a'], false));
+  el('circle', { r: mr, fill: 'url(#gold)', mask: 'url(#cr)', filter: 'url(#glow)' }, g);
+  el('circle', { cx: mr * .62, cy: -mr * .62, r: R * .035, fill: '#fff1c1', filter: 'url(#glow)' }, g);
+  document.getElementById('div1').innerHTML = divider(520);
+</script>
+</body></html>

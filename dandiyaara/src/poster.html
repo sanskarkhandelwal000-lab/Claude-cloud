@@ -1,0 +1,93 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Dandiyaara Poster</title>
+<link rel="stylesheet" href="kit.css">
+<style>
+  .canvas { width: 1240px; height: 1754px; }
+  #brand { top: 132px; }
+  #brand .neish { font: 600 52px 'Cinzel', serif; letter-spacing: .34em; padding-left: .34em; }
+  #brand .pres { font: 400 22px 'Jost'; letter-spacing: .6em; padding-left: .6em; margin-top: 10px; color: #e9d3a0; }
+  #title { top: 948px; }
+  #title .foil { font-size: 136px; }
+  #scrim { left:0; right:0; top: 880px; height: 300px; background: radial-gradient(ellipse at 50% 50%, rgba(10,6,17,.85), rgba(10,6,17,0) 70%); }
+  #tag { top: 1132px; font: 600 40px 'Cinzel', serif; letter-spacing: .46em; padding-left: .46em; color: #fbe3ae; }
+  #div1 { top: 1196px; }
+  #pillars { top: 1238px; font: 500 21px 'Jost'; letter-spacing: .5em; color: #e8cf98; }
+  #pillars b { color: var(--rani); font-weight: 600; padding: 0 .6em; letter-spacing: 0; }
+  #info { top: 1318px; left: 110px; right: 110px; height: 190px; display: grid; grid-template-columns: 1fr 1.25fr 1fr; align-items: center; }
+  #info > div { text-align: center; position: relative; }
+  #info > div + div::before { content: ''; position: absolute; left: 0; top: 10px; bottom: 10px; width: 1px; background: linear-gradient(transparent, #f2c66d, transparent); }
+  .k { font: 500 18px 'Jost'; letter-spacing: .5em; padding-left: .5em; color: #e8cf98; }
+  .v { font: 600 46px 'Cinzel', serif; letter-spacing: .08em; color: #fff1c1; line-height: 1.1; margin: 6px 0; }
+  .date .day { font: 500 20px 'Jost'; letter-spacing: .6em; padding-left: .6em; color: var(--rani); }
+  .date .num { font: 900 128px/0.9 'Bodoni Moda', serif; font-variation-settings: 'opsz' 96; }
+  .date .mon { font: 600 26px 'Cinzel'; letter-spacing: .7em; padding-left: .7em; color: #fff1c1; margin-top: 4px; }
+  #sun { top: 1534px; font: 400 44px 'Pinyon Script'; color: #ffcf7a; }
+  #cta { top: 1604px; display: flex; justify-content: center; }
+  .pill { display: flex; align-items: stretch; border: 1.5px solid #f2c66d; border-radius: 999px; overflow: hidden; font: 600 19px 'Jost'; letter-spacing: .34em; }
+  .pill span { padding: 15px 30px 15px 36px; color: #fff1c1; }
+  .pill em { font-style: normal; padding: 15px 34px; background: linear-gradient(90deg, #e0157a, #ff2d7a); color: #fff; letter-spacing: .3em; }
+  #foot { top: 1690px; font: 500 15px 'Jost'; letter-spacing: .5em; color: #e2c68c; z-index:2; }
+  #foot i { font-style: normal; color: #ff2d7a; padding: 0 1.2em; }
+  .vert { top: 1330px; font-size: 15px; letter-spacing: .5em; color: rgba(242,198,109,.6); white-space: nowrap; }
+  #vl { left: 48px; transform: translate(-50%, -50%) rotate(90deg); font-family: 'Noto Serif Gujarati'; letter-spacing: .3em; font-size: 19px; }
+  #vr { right: 48px; transform: translate(50%, -50%) rotate(90deg); font-family: 'Jost'; }
+</style></head>
+<body>
+<div class="canvas" id="cv">
+  <svg class="layer" id="art" viewBox="0 0 1240 1754" width="1240" height="1754"></svg>
+
+  <div class="abs center" id="brand"><div class="neish goldtxt">NEISH</div><div class="pres">PRESENTS</div></div>
+  <div class="abs" id="scrim"></div>
+  <div class="abs center" id="title"><div class="foil"><span class="halo">DANDIYAARA</span><span class="base">DANDIYAARA</span><span class="shade">DANDIYAARA</span><span class="face">DANDIYAARA</span><span class="shine">DANDIYAARA</span></div></div>
+  <div class="abs center" id="tag">NAVRATRI AFTER DARK</div>
+  <div class="abs center" id="div1"></div>
+  <div class="abs center" id="pillars">GARBA<b>✦</b>DANDIYA<b>✦</b>MUSIC<b>✦</b>DHOL</div>
+
+  <div class="abs" id="info">
+    <div><div class="k">TIME</div><div class="v">4 PM</div><div class="k">ONWARDS</div></div>
+    <div class="date"><div class="day">SATURDAY</div><div class="num goldtxt">17</div><div class="mon">OCTOBER</div></div>
+    <div><div class="k">VENUE</div><div class="v">MAGIQUE</div><div class="k">BENGALURU</div></div>
+  </div>
+  <div class="abs center" id="sun">from golden hour, till after dark</div>
+  <div class="abs center" id="cta"><div class="pill"><span>LIMITED PASSES</span><em>BOOK NOW</em></div></div>
+  <div class="abs center" id="foot">DRESS TRADITIONAL<i>✦</i>DANCE FEARLESS<i>✦</i>CELEBRATE TOGETHER</div>
+
+  <div class="abs vert" id="vl">નવરાત્રી · ગરબા</div>
+  <div class="abs vert" id="vr">12.97° N · 77.59° E · BLR</div>
+
+  <div class="frame" style="inset:26px"></div>
+  <div class="vignette"></div>
+  <svg class="grain" width="200%" height="200%"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="3" stitchTiles="stitch"/><feColorMatrix values="0 0 0 0 .5  0 0 0 0 .5  0 0 0 0 .5  0 0 0 1.4 -.2"/></filter><rect width="100%" height="100%" filter="url(#n)"/></svg>
+</div>
+<script src="kit.js"></script>
+<script>
+  // Formats share one layout; only vertical rhythm changes. Rendered at 2480px wide (A4) or 2160px (social).
+  const F = {
+    a4:    { H: 1754, my: 655, R: 305, brand: 132, title: 948, tag: 1132, div1: 1196, pillars: 1238, info: 1318, sun: 1534, cta: 1604, foot: 1690, vert: 1330 },
+    feed:  { H: 1550, my: 560, R: 258, brand: 120, title: 790, tag: 968, div1: 1028, pillars: 1066, info: 1132, sun: -999, cta: 1385, foot: 1478, vert: 1150 },
+    story: { H: 2204, my: 850, R: 330, brand: 300, title: 1170, tag: 1356, div1: 1420, pillars: 1462, info: 1548, sun: 1772, cta: 1846, foot: 1946, vert: 1560 },
+  }[location.hash.slice(1) || 'a4'];
+  const W = 1240, H = F.H, svg = document.getElementById('art');
+  const cv = document.getElementById('cv'); cv.style.height = H + 'px';
+  svg.setAttribute('viewBox', `0 0 ${W} ${H}`); svg.setAttribute('height', H);
+  ['brand', 'title', 'tag', 'div1', 'pillars', 'info', 'sun', 'cta', 'foot'].forEach(id => document.getElementById(id).style.top = F[id] + 'px');
+  document.getElementById('scrim').style.top = (F.title - 68) + 'px';
+  document.querySelectorAll('.vert').forEach(v => v.style.top = F.vert + 'px');
+  defs(svg);
+  svg.querySelector('defs').insertAdjacentHTML('beforeend', `
+    <radialGradient id="bg1" cx=".5" cy=".38" r=".75"><stop offset="0" stop-color="#4a0d34"/><stop offset=".45" stop-color="#1c0820"/><stop offset="1" stop-color="#07040d"/></radialGradient>
+    <radialGradient id="horizon" cx=".5" cy="1" r=".7"><stop offset="0" stop-color="#ff7a1a" stop-opacity=".32"/><stop offset=".5" stop-color="#e0157a" stop-opacity=".1"/><stop offset="1" stop-color="#e0157a" stop-opacity="0"/></radialGradient>`);
+  el('rect', { width: W, height: H, fill: 'url(#bg1)' }, svg);
+  el('rect', { y: H * .55, width: W, height: H * .45, fill: 'url(#horizon)' }, svg);
+  bandhani(svg, W, H, 34, '#ff2d7a', .09);
+  // stars
+  for (let i = 0; i < 120; i++) {
+    const x = Math.random() * W, y = Math.random() * H * .5, r = Math.random() * 1.6 + .3;
+    el('circle', { cx: x, cy: y, r, fill: '#fff1c1', opacity: Math.random() * .7 + .1 }, svg);
+  }
+  toran(svg, 26, W - 26, 26, 34, 34, 1.15);
+  bokeh(svg, W, H, 46, [[0, 160, 230, F.title + 50], [1010, 160, 1240, F.title + 50], [0, H - 250, 1240, H]]);
+  mandala(svg, W / 2, F.my, F.R, { rays: 36, mirrors: 24, ringText: 'DANDIYAARA ✦ NAVRATRI AFTER DARK ✦ 17 · 10 · 2026 ✦ MAGIQUE ✦ BENGALURU ✦ NEISH ✦ ', ringRepeat: 2 });
+  document.getElementById('div1').innerHTML = divider(520);
+</script>
+</body></html>

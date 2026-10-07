@@ -1,0 +1,106 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Dandiyaara Flyer</title>
+<link rel="stylesheet" href="kit.css">
+<style>
+  .canvas { width: 1240px; height: 1754px; }
+  .side { display: none; } body.front .front, body.back .back { display: block; }
+  .neish { font: 600 50px 'Cinzel', serif; letter-spacing: .34em; padding-left: .34em; }
+  .pres { font: 400 21px 'Jost'; letter-spacing: .6em; padding-left: .6em; margin-top: 8px; color: #e9d3a0; }
+  .tag { font: 600 36px 'Cinzel', serif; letter-spacing: .46em; padding-left: .46em; color: #fbe3ae; }
+  .k { font: 500 18px 'Jost'; letter-spacing: .5em; padding-left: .5em; color: #e8cf98; }
+  .rani { color: #ff2d7a; }
+
+  /* FRONT — the date is the hero, set inside the garba circle */
+  #f-brand { top: 128px; } #f-title { top: 262px; } #f-title .foil { font-size: 136px; } #f-tag { top: 440px; }
+  #f-num { top: 872px; font: 900 150px/1 'Bodoni Moda', serif; font-variation-settings: 'opsz' 96; }
+  #f-num small { display: block; font: 600 30px 'Cinzel'; letter-spacing: .6em; padding-left: .6em; color: #ff2d7a; font-size: 22px; margin-top: 2px; }
+  #f-when { top: 1360px; font: 600 40px 'Cinzel', serif; letter-spacing: .14em; color: #fff1c1; }
+  #f-when b { color: #ff2d7a; font-weight: 400; padding: 0 .5em; }
+  #f-where { top: 1428px; font: 500 21px 'Jost'; letter-spacing: .55em; padding-left: .55em; color: #e8cf98; }
+  #f-sun { top: 1488px; font: 400 44px 'Pinyon Script'; color: #ffcf7a; }
+  #f-cta { top: 1584px; display: flex; justify-content: center; }
+  .pill { display: flex; border: 1.5px solid #f2c66d; border-radius: 999px; overflow: hidden; font: 600 19px 'Jost'; letter-spacing: .34em; }
+  .pill span { padding: 15px 30px 15px 36px; color: #fff1c1; } .pill em { font-style: normal; padding: 15px 34px; background: linear-gradient(90deg, #e0157a, #ff2d7a); color: #fff; }
+  #f-foot, #b-foot { top: 1690px; font: 500 15px 'Jost'; letter-spacing: .5em; color: #e2c68c; }
+  #f-foot i, #b-foot i { font-style: normal; color: #ff2d7a; padding: 0 1.2em; }
+
+  /* BACK — the details that convert a like into a booking */
+  #b-brand { top: 120px; } #b-brand .foil { font-size: 92px; }
+  #b-head { top: 290px; font: 600 54px/1.25 'Cinzel', serif; letter-spacing: .06em; color: #fff1c1; }
+  #b-head span { color: #ff2d7a; }
+  #b-div { top: 440px; }
+  #b-list { top: 500px; left: 170px; right: 170px; }
+  .row { display: grid; grid-template-columns: 110px 1fr; align-items: baseline; padding: 22px 0; border-bottom: 1px solid rgba(242,198,109,.22); }
+  .row .n { font: 400 54px/1 'Bodoni Moda', serif; font-style: italic; color: #f2c66d; }
+  .row h3 { font: 600 32px 'Cinzel', serif; letter-spacing: .14em; color: #fff1c1; }
+  .row p { font: 300 22px/1.4 'Jost'; color: #e3cfa4; margin-top: 6px; letter-spacing: .02em; }
+  #b-dress { top: 1150px; left: 170px; right: 170px; border: 1.5px solid rgba(242,198,109,.6); padding: 30px 40px; text-align: center; background: rgba(92,15,53,.35); }
+  #b-dress .s { font: 400 50px/1 'Pinyon Script'; color: #ffcf7a; }
+  #b-dress p { font: 400 22px/1.5 'Jost'; color: #f0dcb2; margin-top: 12px; letter-spacing: .04em; }
+  #b-info { top: 1395px; left: 170px; right: 170px; display: grid; grid-template-columns: 1fr 200px; gap: 40px; align-items: center; }
+  #b-info .v { font: 600 38px/1.3 'Cinzel', serif; color: #fff1c1; letter-spacing: .06em; margin: 8px 0 14px; }
+  .qr { width: 200px; height: 200px; border: 2px dashed #f2c66d; display: grid; place-items: center; text-align: center; font: 500 16px/1.6 'Jost'; letter-spacing: .3em; color: #e8cf98; background: rgba(10,6,17,.6); }
+</style></head>
+<body>
+<div class="canvas" id="cv">
+  <svg class="layer" id="art" viewBox="0 0 1240 1754" width="1240" height="1754"></svg>
+
+  <div class="side front">
+    <div class="abs center" id="f-brand"><div class="neish goldtxt">NEISH</div><div class="pres">PRESENTS</div></div>
+    <div class="abs center" id="f-title"><div class="foil"><span class="halo">DANDIYAARA</span><span class="base">DANDIYAARA</span><span class="shade">DANDIYAARA</span><span class="face">DANDIYAARA</span><span class="shine">DANDIYAARA</span></div></div>
+    <div class="abs center tag" id="f-tag">NAVRATRI AFTER DARK</div>
+    <div class="abs center" id="f-num"><span class="goldtxt">17</span><small>OCT</small></div>
+    <div class="abs center" id="f-when">SATURDAY<b>✦</b>4 PM ONWARDS</div>
+    <div class="abs center" id="f-where">MAGIQUE · BENGALURU</div>
+    <div class="abs center" id="f-sun">from golden hour, till after dark</div>
+    <div class="abs center" id="f-cta"><div class="pill"><span>LIMITED PASSES</span><em>BOOK NOW</em></div></div>
+    <div class="abs center" id="f-foot">DRESS TRADITIONAL<i>✦</i>DANCE FEARLESS<i>✦</i>CELEBRATE TOGETHER</div>
+  </div>
+
+  <div class="side back">
+    <div class="abs center" id="b-brand"><div class="k" style="margin-bottom:14px">NEISH PRESENTS</div><div class="foil"><span class="halo">DANDIYAARA</span><span class="base">DANDIYAARA</span><span class="shade">DANDIYAARA</span><span class="face">DANDIYAARA</span><span class="shine">DANDIYAARA</span></div></div>
+    <div class="abs center" id="b-head">ONE NIGHT. ONE CIRCLE.<br><span>ALL OF BENGALURU.</span></div>
+    <div class="abs center" id="b-div"></div>
+    <div class="abs" id="b-list">
+      <div class="row"><div class="n">01</div><div><h3>GARBA CIRCLES</h3><p>Join the circle at golden hour, and stay in it till the stars are out.</p></div></div>
+      <div class="row"><div class="n">02</div><div><h3>DANDIYA RAAS</h3><p>Sticks up. Every clash on the beat.</p></div></div>
+      <div class="row"><div class="n">03</div><div><h3>DHOL &amp; MUSIC</h3><p>Folk roots in the evening, bigger beats after dark.</p></div></div>
+      <div class="row"><div class="n">04</div><div><h3>THE AFTER DARK HOUR</h3><p>When the lights drop and the whole floor becomes one circle.</p></div></div>
+    </div>
+    <div class="abs" id="b-dress"><div class="k">DRESS CODE</div><div class="s" style="margin-top:14px">Traditional, turned up</div><p>Chaniya choli · Kediyu · Kurta · Mirror-work · Bandhani<br>Come dressed to be photographed.</p></div>
+    <div class="abs" id="b-info">
+      <div><div class="k">WHEN</div><div class="v">SAT, 17 OCTOBER<br><span class="rani">4 PM</span> ONWARDS</div><div class="k">WHERE</div><div class="v" style="margin-bottom:0">MAGIQUE, BENGALURU</div></div>
+      <div class="qr">SCAN<br>TO<br>BOOK<br><span style="font-size:12px;opacity:.6">QR HERE</span></div>
+    </div>
+    <div class="abs center" id="b-foot">LIMITED PASSES<i>✦</i>BOOK NOW<i>✦</i>LINK IN BIO</div>
+  </div>
+
+  <div class="frame" style="inset:26px"></div>
+  <div class="vignette"></div>
+  <svg class="grain" width="200%" height="200%"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="3" stitchTiles="stitch"/><feColorMatrix values="0 0 0 0 .5  0 0 0 0 .5  0 0 0 0 .5  0 0 0 1.4 -.2"/></filter><rect width="100%" height="100%" filter="url(#n)"/></svg>
+</div>
+<script src="kit.js"></script>
+<script>
+  const side = location.hash.slice(1) || 'front';
+  document.body.className = side;
+  const W = 1240, H = 1754, svg = document.getElementById('art');
+  defs(svg);
+  svg.querySelector('defs').insertAdjacentHTML('beforeend', `
+    <radialGradient id="bg1" cx=".5" cy="${side === 'front' ? .55 : .3}" r=".75"><stop offset="0" stop-color="#4a0d34"/><stop offset=".45" stop-color="#1c0820"/><stop offset="1" stop-color="#07040d"/></radialGradient>
+    <radialGradient id="horizon" cx=".5" cy="1" r=".7"><stop offset="0" stop-color="#ff7a1a" stop-opacity=".3"/><stop offset="1" stop-color="#e0157a" stop-opacity="0"/></radialGradient>`);
+  el('rect', { width: W, height: H, fill: 'url(#bg1)' }, svg);
+  el('rect', { y: H * .55, width: W, height: H * .45, fill: 'url(#horizon)' }, svg);
+  bandhani(svg, W, H, 34, '#ff2d7a', side === 'front' ? .09 : .06);
+  for (let i = 0; i < 100; i++) el('circle', { cx: Math.random() * W, cy: Math.random() * H * .5, r: Math.random() * 1.5 + .3, fill: '#fff1c1', opacity: Math.random() * .6 + .1 }, svg);
+  if (side === 'front') {
+    toran(svg, 26, W - 26, 26, 34, 34, 1.15);
+    bokeh(svg, W, H, 40, [[0, 500, 220, 1300], [1020, 500, 1240, 1300], [0, 1520, 1240, 1754]]);
+    mandala(svg, W / 2, 960, 330, { rays: 36, mirrors: 24, core: false, ringText: 'SATURDAY ✦ 17 OCTOBER 2026 ✦ 4 PM ONWARDS ✦ MAGIQUE ✦ BENGALURU ✦ ', ringRepeat: 2 });
+  } else {
+    // a half-mandala rising off the bottom edge, echoing the front
+    mandala(svg, W / 2, H + 250, 420, { rays: 40, mirrors: 28, core: false }).setAttribute('opacity', .22);
+    bokeh(svg, W, H, 20, [[0, 200, 170, 1200], [1070, 200, 1240, 1200]]);
+  }
+  document.querySelectorAll('#b-div').forEach(d => d.innerHTML = divider(420));
+</script>
+</body></html>
