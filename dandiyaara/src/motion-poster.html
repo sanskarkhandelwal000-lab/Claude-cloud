@@ -1,0 +1,58 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Dandiyaara Motion Poster</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700;800;900&display=block" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #000; }
+  .cv { position: relative; width: 1080px; height: 1920px; overflow: hidden; color: #fff; font-family: 'Inter Tight', sans-serif;
+    background: url(../assets/motion_bg.png) center / cover no-repeat; }
+  .abs { position: absolute; left: 0; right: 0; text-align: center; }
+  .glow { text-shadow: 0 0 18px rgba(255, 120, 40, .45), 0 2px 10px rgba(0, 0, 0, .55); }
+
+  /* logo lockup */
+  #logo { top: 78px; }
+  #logo svg { display: block; margin: 0 auto; filter: drop-shadow(0 0 10px rgba(255,140,60,.5)); }
+  #logo .word { font: 600 64px/1 'Inter Tight'; letter-spacing: .42em; padding-left: .42em; margin-top: 18px; }
+  #logo .sub { display: flex; align-items: center; justify-content: center; gap: 18px; margin-top: 16px; font: 500 19px 'Inter Tight'; letter-spacing: .5em; padding-left: .5em; }
+  #logo .sub i { width: 64px; height: 1.5px; background: #fff; opacity: .9; }
+
+  /* rule row with two flanking tags (like LADIES FREE DRINK —— TILL 1:00 AM) */
+  #flank { top: 1186px; left: 128px; right: 128px; display: grid; grid-template-columns: auto 1fr auto; align-items: end; column-gap: 18px; font: 700 31px/1.18 'Inter Tight'; }
+  #flank .l { text-align: right; } #flank .r { text-align: left; }
+  #flank .rule { height: 2px; background: linear-gradient(90deg, rgba(255,255,255,.2), #fff 50%, rgba(255,255,255,.2)); margin-bottom: 14px; }
+
+  #t1 { top: 1272px; font: 800 148px/1 'Inter Tight'; letter-spacing: -.012em; }
+  #t2 { top: 1428px; font: 800 76px/1 'Inter Tight'; letter-spacing: .005em; }
+  #line { top: 1550px; font: 700 27px 'Inter Tight'; letter-spacing: .02em; }
+  #line b { font-weight: 400; padding: 0 .45em; opacity: .9; }
+  #date { top: 1618px; font: 700 46px 'Inter Tight'; letter-spacing: .01em; }
+  #date sup { font-size: .5em; vertical-align: .9em; margin-left: 1px; margin-right: 10px; }
+  #info { top: 1712px; font: 600 25px/1.45 'Inter Tight'; }
+  #info span { opacity: .9; }
+  #mini { top: 1830px; display: flex; justify-content: center; align-items: center; gap: 12px; font: 700 22px 'Inter Tight'; letter-spacing: .3em; }
+</style></head>
+<body>
+<div class="cv">
+  <div class="abs glow" id="logo">
+    <!-- NEISH mark: crossed dandiya under a crescent -->
+    <svg width="118" height="104" viewBox="0 0 118 104" fill="none" stroke="#fff" stroke-linecap="round">
+      <path d="M14 46 A46 46 0 0 0 104 46" stroke-width="4"/>
+      <line x1="22" y1="8" x2="96" y2="96" stroke-width="6.5"/>
+      <line x1="96" y1="8" x2="22" y2="96" stroke-width="6.5"/>
+      <circle cx="18" cy="4" r="5" fill="#fff" stroke="none"/><circle cx="100" cy="4" r="5" fill="#fff" stroke="none"/>
+    </svg>
+    <div class="word">NEISH</div>
+    <div class="sub"><i></i>PRESENTS<i></i></div>
+  </div>
+
+  <div class="abs glow" id="flank">
+    <div class="l">DRESS<br>TRADITIONAL</div><div class="rule"></div><div class="r">4 PM<br>ONWARDS</div>
+  </div>
+  <div class="abs glow" id="t1">DANDIYAARA</div>
+  <div class="abs glow" id="t2">NAVRATRI AFTER DARK</div>
+  <div class="abs glow" id="line">GARBA<b>|</b>DANDIYA RAAS<b>|</b>LIVE MUSIC<b>|</b>DJ</div>
+  <div class="abs glow" id="date">SATURDAY, 17<sup>th</sup>OCTOBER</div>
+  <div class="abs glow" id="info"><span>FOR PASSES : LINK IN BIO</span><br>MAGIQUE, Bengaluru</div>
+  <div class="abs glow" id="mini"><svg width="34" height="30" viewBox="0 0 118 104" fill="none" stroke="#fff" stroke-linecap="round"><path d="M14 46 A46 46 0 0 0 104 46" stroke-width="8"/><line x1="22" y1="8" x2="96" y2="96" stroke-width="11"/><line x1="96" y1="8" x2="22" y2="96" stroke-width="11"/></svg>NEISH</div>
+</div>
+</body></html>
